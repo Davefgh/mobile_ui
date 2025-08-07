@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Monitoring</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="am_ui">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
 
-  <title>am_ui</title>
-  <link rel="manifest" href="manifest.json">
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-btn {
+      background-color: blue;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: darkblue;
+    }
+
+    .forgot-password {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .forgot-password a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+  <div class="container">
+    <img src="../assets/aclc_logo.png" alt="Logo" class="logo">
+    <h1>ATTENDANCE MONITORING</h1>
+    <form>
+      <input type="text" placeholder="Username or Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="forgot-password">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
 </body>
 </html>
